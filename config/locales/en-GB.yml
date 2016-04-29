@@ -28,6 +28,7 @@ en-GB:
   backlogs_sharing_new_sprint_explanation: "Although all possible options are available here, new sprints are shared only according to the users and projects permissions. System shared sprints can only be created by admins, hierarchy and tree shared sprints need permissions on the topmost project."
   backlogs_sharing_support: "Backlogs sharing"
   backlogs_show_in_scrum_stats: "Show project in Scrum statistics"
+  backlogs_calculate_sprint_name: "Velocity calculation by sprint name (LIKE match pattern)"
   backlogs_show_priority: "Show task priority on taskboard"
   backlogs_show_redmine_std_header: "Show redmine header in backlogs"
   backlogs_show_stories_from_subprojects_in_backlog: "Show stories from subprojects in backlog"
