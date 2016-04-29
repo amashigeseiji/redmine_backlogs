@@ -37,6 +37,12 @@
   <%= text_field_tag("settings[calculate_sprint_name]",
       @project.rb_project_settings.calculate_sprint_name) %>
 </p>
+<p>
+  <%= content_tag(:label, l(:backlogs_calculate_with_other_project)) %>
+  <%= text_field_tag("settings[calculate_with_other_project]",
+      @project.rb_project_settings.calculate_with_other_project) %>
+</p>
+<%= content_tag(:label, l(:backlogs_calculate_with_other_project_requirement)) %>
 </div>
 <%= submit_tag(l(:button_save)) %>
 <% end %>

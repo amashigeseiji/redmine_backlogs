@@ -29,6 +29,8 @@ ja:
   backlogs_sharing_support: バックログの共有
   backlogs_show_in_scrum_stats: スクラム統計にプロジェクトを表示
   backlogs_calculate_sprint_name: ベロシティを計測するスプリント名(like検索でのマッチパターン)
+  backlogs_calculate_with_other_project: ベロシティを計測するプロジェクトの識別子(カンマ区切りで複数受け付けます)
+  backlogs_calculate_with_other_project_requirement: "注: プロジェクト指定する場合スプリント名の指定が必要です"
   backlogs_show_priority: タスクボードにタスクの優先度を表示
   backlogs_show_redmine_std_header: バックログにRedmineのヘッダを表示
   backlogs_show_stories_from_subprojects_in_backlog: バックログでサブプロジェクトのストーリーを表示する

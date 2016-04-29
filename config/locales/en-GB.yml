@@ -29,6 +29,8 @@ en-GB:
   backlogs_sharing_support: "Backlogs sharing"
   backlogs_show_in_scrum_stats: "Show project in Scrum statistics"
   backlogs_calculate_sprint_name: "Velocity calculation by sprint name (LIKE match pattern)"
+  backlogs_calculate_with_other_project: "Velocity calculation with other project (accept multi input with comma)"
+  backlogs_calculate_with_other_project_requirement: "NOTE: sprint name is required if project input."
   backlogs_show_priority: "Show task priority on taskboard"
   backlogs_show_redmine_std_header: "Show redmine header in backlogs"
   backlogs_show_stories_from_subprojects_in_backlog: "Show stories from subprojects in backlog"

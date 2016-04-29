@@ -7,10 +7,19 @@ module Backlogs
       @statistics = {:succeeded => [], :failed => [], :values => {}}
 
       @active_sprint = @project.active_sprint
-      conditions = ["project_id = ? and not(effective_date is null or sprint_start_date is null) and effective_date < ?", @project.id, Date.today]
-      if !@project.rb_project_settings.calculate_sprint_name.empty?
+      conditions = ["not(effective_date is null or sprint_start_date is null) and effective_date < ?", Date.today]
+      settings = @project.rb_project_settings
+      if !settings.calculate_sprint_name.empty?
         conditions[0] += " and name like ?"
         conditions.push('%' + @project.rb_project_settings.calculate_sprint_name + '%')
+      end
+      if !settings.calculate_with_other_project.empty?
+        ids = Project.select(:id).where(identifier: settings.calculate_with_other_project.split(",")).map {|p| p.id}
+        conditions[0] += " and project_id in (?)"
+        conditions.push(ids.push(@project.id).uniq)
+      else
+        conditions[0] += " and project_id = ?"
+        conditions.push(@project.id)
       end
       @past_sprints = RbSprint.find(:all,
         :conditions => conditions,
